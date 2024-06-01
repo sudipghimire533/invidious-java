@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.sudip'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // for Result type
+    implementation 'com.hubspot:algebra:1.4'
+
+    // for json utils
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
+
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
